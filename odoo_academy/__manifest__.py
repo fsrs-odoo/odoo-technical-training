@@ -24,6 +24,7 @@
     'data': [
     ],
     'demo': [
+        'demo/academy_demo.xml',
     ],
     #Add license to remove License Warning
     'license': 'OPL-1'
