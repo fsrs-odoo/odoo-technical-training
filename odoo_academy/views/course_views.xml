@@ -51,18 +51,5 @@
                 </search>
             </field>
         </record>
-
-        <record model="ir.ui.view" id="course_view_pivot">
-            <field name="name">academy.course.pivot</field>
-            <field name="model">academy.course</field>
-            <field name="arch" type="xml">
-                <pivot>
-                    <field name="level" type="row"/>
-                    <field name="name" type="row"/>
-                    <field name="base_price" type="measure"/>
-                    <field name="total_price" type="measure"/>
-                </pivot>
-            </field>
-        </record>
     </data>
 </odoo> 
