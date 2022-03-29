@@ -10,12 +10,9 @@
                        <h1><field name="name"/></h1>
                         <group>
                             <field name="course_id"/>
-                            <field name="instructor_id"/>
                         </group>
                         <group>
-                            <field name="start_date"/>
-                            <field name="end_date"/>
-                            <field name="duration"/>
+                            <field name="instructor_id"/>
                         </group>
                         <notebook>
                             <page string="Students">
