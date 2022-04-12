@@ -48,7 +48,10 @@
                           color="instructor_id"
                           mode="month">
                     <field name="name"/>
+                    <!--TO ADD THE FILTERS IN THE CALENDAR VIEW WE NEED TO ADD THE ATTRIBUTE FILTERS='1' TO ALSO ADD THE RECORD IMAGE WE USE THE "AVATAR_FIELD" ATTRIBUTE
                     <field name="instructor_id"/>
+                    -->
+                    <field name="instructor_id" filters='1' avatar_field='avatar_128'/>
                 </calendar>
             </field>
         </record>
