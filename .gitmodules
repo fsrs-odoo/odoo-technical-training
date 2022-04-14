@@ -1,0 +1,4 @@
+[submodule "fsrs-odoo/march-technical-training"]
+	path = fsrs-odoo/march-technical-training
+	url = git@github.com:fsrs-odoo/march-technical-training.git
+	branch = 15.0-odoo-academy-sequence
