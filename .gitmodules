@@ -1,0 +1,4 @@
+[submodule "OCA/apps-store"]
+	path = OCA/apps-store
+	url = git@github.com:OCA/apps-store.git
+	branch = 15.0
