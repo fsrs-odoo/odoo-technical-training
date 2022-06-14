@@ -2,3 +2,8 @@
 	path = OCA/apps-store
 	url = git@github.com:OCA/apps-store.git
 	branch = 15.0
+
+[submodule "tivisse/odoodays-2018"]
+	path = tivisse/odoodays-2018
+	url = git@github.com:tivisse/odoodays-2018.git
+	branch = master
