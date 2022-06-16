@@ -1,7 +1,7 @@
 from xmlrpc import client
 
-url = 'https://april-odoo-technical-training-15-0-odoo-academy-day1-4574083.dev.odoo.com'
-db = 'april-odoo-technical-training-15-0-odoo-academy-day1-4574083'
+url = 'https://fsrs-odoo-odoo-technical-training-15-0-odoo-academy--5156927.dev.odoo.com'
+db = 'fsrs-odoo-odoo-technical-training-15-0-odoo-academy--5156927'
 username = 'admin'
 password = 'admin'
 
