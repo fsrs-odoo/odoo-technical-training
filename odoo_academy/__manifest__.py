@@ -18,8 +18,8 @@
     
     'category': 'Training',
     'version': '0.1',
-    
-    'depends': ['sale','website'],
+    #change name of sale app in v15
+    'depends': ['sale_management','website'],
     
     'data': [
         'security/academy_security.xml',

@@ -30,5 +30,11 @@ class SaleWizard(models.TransientModel):
                 order_id = self.env['sale.order'].create({
                     'partner_id': student.id,
                     'session_id': self.session_id.id,
-                    'order_line': [(0,0,{'product_id': session_product_id.id, 'price_unit':self.session_id.total_price})]
+# EXAMPLE OF NEW Syntaxis                     
+                    'order_line': [fields.Command.create({
+                        'product_id': session_product_id.id,
+                        'price_unit':self.session_id.total_price              
+                    })]
+                    # EXAMPLE OF PREVIOUS SYNTAX
+#                    'order_line': [(0,0,{'product_id': session_product_id.id, 'price_unit':self.session_id.total_price})]
                 })
