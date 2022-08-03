@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record model="dog.dog" id="1">
-        <field name="name">Dog</field>
+        <field name="breed">Dog</field>
     </record>
     <record model="dog.dog" id="2">
-        <field name="name">dog</field>
+        <field name="breed">dog</field>
     </record>
     <record model="dog.dog" id="3">
-        <field name="name">Bulldog</field>
+        <field name="breed">Bulldog</field>
     </record>
     <record model="dog.dog" id="4">
-        <field name="name">Sheepdog</field>
+        <field name="breed">Sheepdog</field>
     </record>
     <record model="dog.dog" id="5">
-        <field name="name">Taiwan Dog</field>
+        <field name="breed">Taiwan Dog</field>
     </record>
     <record model="dog.dog" id="6">
-        <field name="name">Chihuahua</field>
+        <field name="breed">Chihuahua</field>
     </record>
 </odoo>
