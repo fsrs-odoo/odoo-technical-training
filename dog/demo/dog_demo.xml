@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="dog.dog" id="1">
+        <field name="name">Wild Hogs</field>
+    </record>
+    <record model="dog.dog" id="2">
+        <field name="name">Wild Hogs</field>
+    </record>
+    <record model="dog.dog" id="3">
+        <field name="name">Wild Hogs</field>
+    </record>
+    <record model="dog.dog" id="4">
+        <field name="name">Wild Hogs</field>
+    </record>
+    <record model="dog.dog" id="5">
+        <field name="name">Wild Hogs</field>
+    </record>
+    <record model="dog.dog" id="6">
+        <field name="name">Wild Hogs</field>
+    </record>
+</odoo>
