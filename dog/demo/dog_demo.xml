@@ -18,4 +18,11 @@
     <record model="dog.dog" id="6">
         <field name="breed">Chihuahua</field>
     </record>
+    <record model="dog.dog" id="7">
+        <field name="breed">English Bulldog</field>
+        <field name="parent_id" ref="3"/>
+    </record>
+    <record model="dog.dog" id="8">
+        <field name="breed" ref="3"/>
+    </record>
 </odoo>
