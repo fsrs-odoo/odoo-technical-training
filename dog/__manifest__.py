@@ -7,6 +7,7 @@
     'website': 'www.odoo.com',
     'license': 'OPL-1',
     'data': [
+        "security/ir.model.access.csv"
 
     ],
     'demo': [
