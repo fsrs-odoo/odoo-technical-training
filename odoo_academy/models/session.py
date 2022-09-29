@@ -15,8 +15,9 @@ class Session(models.Model):
     name = fields.Char(string='Title', related='course_id.name')
 
     instructor_id = fields.Many2one(comodel_name='res.partner', string='Instructor')
-
-    student_ids = fields.Many2many(comodel_name='res.partner', string='Students')
+    
+    #CHANGE COMODEL NAME TO NEW STUDENT MODEL FOR SEQUENCE
+    student_ids = fields.Many2many(comodel_name='academy.student', string='Students')
 
     start_date = fields.Date(string="Start Date",
                             default=fields.Date.today)

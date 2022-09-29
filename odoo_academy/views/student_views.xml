@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_form_student" model="ir.ui.view">
+        <field name="name">Library Member Form View</field>
+        <field name="model">academy.student</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name" />
+                    <field name="email" />
+                    <field name="enrollment_number" />
+                </group>
+                <notebook>
+                    <page string="Description">
+                        <field name="session_ids"/>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+    
+    <record id="view_tree_student" model="ir.ui.view">
+        <field name="name">Odoo Academy Student List View</field>
+        <field name="model">academy.student</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="enrollment_number" />
+            </tree>
+        </field>
+    </record>
+</odoo>

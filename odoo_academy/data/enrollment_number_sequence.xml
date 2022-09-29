@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="enrollment_number" model="ir.sequence">
+            <field name="name">Enrollment Number</field>
+            <field name="code">enrollment_sequence</field>
+            <field name="prefix">AB</field>
+            <field name="padding">9</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+    </data>
+</odoo>
