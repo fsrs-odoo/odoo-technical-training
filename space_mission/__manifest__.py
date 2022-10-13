@@ -3,7 +3,7 @@
     'version': '',
     'summary': '',
     'description': '',
-    'license": '',
+    'license': '',
     'author': 'fsrs-odoo',
     'website': 'www.odoo.com',
     'category': 'Tech Training',
