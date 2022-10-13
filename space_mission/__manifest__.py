@@ -2,7 +2,7 @@
     'name': '',
     'version': '',
     'summary': '',
-    'description": '',
+    'description': '',
     'license": '',
     'author': 'fsrs-odoo',
     'website': 'www.odoo.com',
