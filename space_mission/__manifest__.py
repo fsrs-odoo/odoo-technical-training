@@ -17,7 +17,7 @@
     'data': [],
     'demo': [],
     
-    'assets': [],
+    'assets': {},
     
     'installable': True,
     'application': True,
