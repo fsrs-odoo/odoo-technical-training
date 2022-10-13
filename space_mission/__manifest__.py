@@ -8,7 +8,7 @@
     'website': 'www.odoo.com',
     'category': 'Tech Training',
     
-    'depends': ['base']
+    'depends': ['base'],
     'data': [],
     'demo': [],
     
