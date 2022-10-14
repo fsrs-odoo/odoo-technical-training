@@ -6,6 +6,7 @@ class Spaceship(models.Model):
     _description = "Space Mission Spaceship"
     
     #Fields definition
+    name = fields.Char(string='Vessel Name')
     active = fields.Boolean(default=True)    
     type = fields.Selection(selection=[('freighter','Freighter'),
                                        ('star_destroyer', 'Star Destroyer'),
