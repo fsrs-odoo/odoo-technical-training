@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="space_mission_admin" model="res.groups">
+        <field name="name">Space Mission / Admin</field>
+        <field name="comment">Control all of the features of the Space Mission</field>
+    </record>
+    <record id="space_mission_crew" model="res.groups">
+        <field name="name">Space Crew</field>
+        <field name="comment">Can Create, Read, and Write on the Space Mission App, but not Delete</field>
+    </record>
+    <record id="space_mission_general" model="res.groups">
+        <field name="name">General</field>
+        <field name="comment">They can only read information from the Space Mission.</field>
+    </record>
+</odoo>

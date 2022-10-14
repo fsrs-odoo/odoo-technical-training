@@ -1,4 +1,4 @@
-<!-- coding:"UTF-8" version="1.0"-->
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate='1'>
         <record id="spaceship_star_destroyer" model="space_mission.spaceship">
