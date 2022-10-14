@@ -1,0 +1,35 @@
+<!-- coding:"UTF-8" version="1.0"-->
+<odoo>
+    <data noupdate='1'>
+        <record id="spaceship_star_destroyer" model="space_mission.spaceship">
+            <field name="type">star_destroyer</field>
+            <field name="model">Imperial I-Class Star Destroyer</field>
+            <field name="capacity_passenger">15000</field>
+            <field name="length">1600</field>
+            <field name="width">550</field>
+            <field name="height">500</field>
+            <field name="weight">352000</field>
+            <field name="fuel_type">solid_fuel</field>
+        </record>
+        <record id="spaceship_freighter" model="space_mission.spaceship">
+            <field name="type">freighter</field>
+            <field name="model">Cargo Carrier</field>
+            <field name="capacity_passenger">50</field>
+            <field name="length">410.5</field>
+            <field name="width">380.5</field>
+            <field name="height">5000</field>
+            <field name="weight">3520000</field>
+            <field name="fuel_type">liquid_fuel</field>
+        </record>
+        <record id="spaceship_x_wing" model="space_mission.spaceship">
+            <field name="type">x_wing</field>
+            <field name="model">X-Wing Starfighter</field>
+            <field name="capacity_passenger">1</field>
+            <field name="length">41.5</field>
+            <field name="width">38.5</field>
+            <field name="height">14.8</field>
+            <field name="weight">7.8</field>
+            <field name="fuel_type">liquid_fuel</field>
+        </record>
+    </data>
+</odoo>
