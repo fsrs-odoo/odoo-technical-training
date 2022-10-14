@@ -68,9 +68,9 @@
                             name="big_vessels" 
                             domain="[('capacity_passenger', '>=', 
                                     50)]"/>
-                    <filter string="Small Vessels < 50 passengers" 
-                            name="big_vessels" 
-                            domain="[('capacity_passenger', '<', 
+                    <filter string="Small Vessels &lt; 50 passengers" 
+                            name="small_vessels" 
+                            domain="[('capacity_passenger', '&lt;', 
                                     50)]"/>
                     <group expand="0" string="Group By">
                         <filter name="type" string="Type" 

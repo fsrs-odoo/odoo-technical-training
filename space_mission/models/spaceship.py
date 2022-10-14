@@ -1,4 +1,5 @@
 from odoo import api, fields, models
+from odoo.exceptions import ValidationError
 
 class Spaceship(models.Model):
 
@@ -25,3 +26,10 @@ class Spaceship(models.Model):
     fuel_type = fields.Selection(selection=[('solid_fuel','Solid Fuel'),
                                             ('liquid_fuel', 'Liquid Fuel')],
                                  string='Fuel Type',)
+            
+    @api.constrains('width','lenght')
+    def _check_width_less_length(self):
+        for record in self:
+            if record.width > record.length:
+                raise ValidationError(('Hey! The width can not be bigger than the length.')) 
+    
