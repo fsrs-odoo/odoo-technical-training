@@ -21,6 +21,7 @@
         </field>
     </record>
     
+    <!-- We use the web_icon attribute to assign the icon to the Menu Item in the App Launcher -->
     <menuitem name="Space Mission"
               id="menu_space_mission"
               web_icon="space_mission,static/description/icon.png"

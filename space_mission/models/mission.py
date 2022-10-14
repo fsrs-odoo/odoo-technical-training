@@ -26,7 +26,6 @@ class Mission(models.Model):
     
     spaceship_id = fields.Many2one(comodel_name='space_mission.spaceship')
     
-    @api.onchange('launch_date', 'return_date', 'duration')
     @api.depends('launch_date', 'duration')
     def _compute_return_date(self):
         for record in self:
@@ -36,10 +35,9 @@ class Mission(models.Model):
                 duration = timedelta(days=record.duration)
                 record.return_date = record.launch_date + duration
     
-    @api.onchange('launch_date', 'return_date', 'duration')
     def _inverse_return_date(self):
         for record in self:
             if record.launch_date and record.return_date:
-                record.duration = (record.return_date - record.launch_date).days + 1
+                record.duration = (record.return_date - record.launch_date).days
             else:
                 continue
