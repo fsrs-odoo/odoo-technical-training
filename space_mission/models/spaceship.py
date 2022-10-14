@@ -1,3 +1,4 @@
+
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
@@ -16,7 +17,7 @@ class Spaceship(models.Model):
                             string='Ship Type',)
     model = fields.Char(string='Ship Model', 
                         required = True)
-    capacity_passenger = fields.Integer(string= "Number of Passengers",
+    crew_capacity = fields.Integer(string= "Number of Passengers",
                                         help="Maximum number of passengers in the Spaceship",)
     length = fields.Float(help="Length of the Ship",)
     width = fields.Float(help="Width of the Ship",)
@@ -26,8 +27,13 @@ class Spaceship(models.Model):
     fuel_type = fields.Selection(selection=[('solid_fuel','Solid Fuel'),
                                             ('liquid_fuel', 'Liquid Fuel')],
                                  string='Fuel Type',)
+    #Add Crew members to vessel
+    crew_ids = fields.Many2many(comodel_name='res.partner',
+                            string='Crew')
+    mission_ids = fields.One2many(comodel_name='space_mission.mission',
+                               inverse_name='spaceship_id')
             
-    @api.constrains('width','lenght')
+    @api.constrains('width','length')
     def _check_width_less_length(self):
         for record in self:
             if record.width > record.length:

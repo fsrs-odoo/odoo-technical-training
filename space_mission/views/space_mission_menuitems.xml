@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="spaceship_list_action" model="ir.actions.act_window">
-        <field name="name">Spaceship</field>
+        <field name="name">Spaceships</field>
         <field name="res_model">space_mission.spaceship</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">        
             <p class="o_view_nocontent_smiling_face">
-                Create the first course
+                Create the first Spaceship
+            </p>
+        </field>
+    </record>
+    <record id="mission_list_action" model="ir.actions.act_window">
+        <field name="name">Missions</field>
+        <field name="res_model">space_mission.mission</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">        
+            <p class="o_view_nocontent_smiling_face">
+                Create the first Mission
             </p>
         </field>
     </record>
@@ -18,6 +28,9 @@
 
     <menuitem id="menu_space_mission_sub" name="Space Mission" parent="menu_space_mission" sequence="2"/>
 
-    <menuitem id="menu_space_mission_spaceship" name="Spaceships" parent="menu_space_mission_sub" sequence="3" 
+    <menuitem id="menu_space_mission_mission" name="Missions" parent="menu_space_mission_sub" sequence="3" 
+              action="mission_list_action"/>
+
+    <menuitem id="menu_space_mission_spaceship" name="Spaceships" parent="menu_space_mission_sub" sequence="4" 
               action="spaceship_list_action"/>
 </odoo>

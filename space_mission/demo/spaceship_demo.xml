@@ -5,7 +5,7 @@
             <field name="name">Super Nova</field>
             <field name="type">star_destroyer</field>
             <field name="model">Imperial I-Class Star Destroyer</field>
-            <field name="capacity_passenger">15000</field>
+            <field name="crew_capacity">15000</field>
             <field name="length">1600</field>
             <field name="width">550</field>
             <field name="height">500</field>
@@ -13,10 +13,10 @@
             <field name="fuel_type">solid_fuel</field>
         </record>
         <record id="spaceship_freighter" model="space_mission.spaceship">
-            <field name="name">Big Donkey</field>
+            <field name="name">Rusty Donkey</field>
             <field name="type">freighter</field>
             <field name="model">Cargo Carrier</field>
-            <field name="capacity_passenger">50</field>
+            <field name="crew_capacity">50</field>
             <field name="length">410.5</field>
             <field name="width">380.5</field>
             <field name="height">5000</field>
@@ -27,7 +27,7 @@
             <field name="name">Match 5</field>
             <field name="type">x_wing</field>
             <field name="model">X-Wing Starfighter</field>
-            <field name="capacity_passenger">1</field>
+            <field name="crew_capacity">1</field>
             <field name="length">41.5</field>
             <field name="width">38.5</field>
             <field name="height">14.8</field>

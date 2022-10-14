@@ -2,3 +2,6 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_spaceship_admin,spaceship admin,space_mission.model_space_mission_spaceship,space_mission_admin,1,1,1,1
 access_spaceship_crew,spaceship crew,space_mission.model_space_mission_spaceship,space_mission_crew,1,1,1,0
 access_spaceship_general,spaceship general,space_mission.model_space_mission_spaceship,space_mission_general,1,0,0,0
+access_mission_admin,mission admin,space_mission.model_space_mission_mission,space_mission_admin,1,1,1,1
+access_mission_crew,mission crew,space_mission.model_space_mission_mission,space_mission_crew,1,1,1,0
+access_mission_general,mission general,space_mission.model_space_mission_mission,space_mission_general,1,0,0,0

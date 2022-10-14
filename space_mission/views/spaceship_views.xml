@@ -1,84 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
-        <record model="ir.ui.view" id="spaceship_view_form">
-            <field name="name">space_mission.spaceship.form</field>
-            <field name="model">space_mission.spaceship</field>
-            <field name="arch" type="xml">
-                <form string="Spaceship Form">
-                    <sheet>
-                        <h1><field name="name"/></h1>
+    <record model="ir.ui.view" id="spaceship_view_form">
+        <field name="name">space_mission.spaceship.form</field>
+        <field name="model">space_mission.spaceship</field>
+        <field name="arch" type="xml">
+            <form string="Spaceship Form">
+                <sheet>
+                    <h1><field name="name"/></h1>
+                    <group>
                         <group>
-                            <group>
-                                <field name="active"/>
-                                <field name="type"/>
-                                <field name="model"/>
-                            </group>
-                            <group>
-                                <field name="fuel_type" widget="radio"/>
-                                <field name="capacity_passenger"/>
-                            </group>
+                            <field name="active"/>
+                            <field name="type"/>
+                            <field name="model"/>
                         </group>
-                        <notebook>
-                            <page string="Technical Data">
-                                <group>
-                                    <group>
-                                        <field name="length"/>
-                                        <field name="width"/>
-                                    </group>
-                                    <group>
-                                        <field name="height"/>
-                                        <field name="weight"/>
-                                    </group>
-                                </group>
-                            </page>
-                        </notebook>
-                    </sheet>
-                </form>
-            </field>
-        </record>
-
-        <record model="ir.ui.view" id="course_view_list">
-            <field name="name">space_mission.spaceship.list</field>
-            <field name="model">space_mission.spaceship</field>
-            <field name="arch" type="xml">
-                <tree string="Course List">
-                    <field name="name"/>
-                    <field name="type"/>
-                    <field name="model"/>
-                    <field name="fuel_type"/>
-                    <field name="capacity_passenger"/>
-                    <field name="length"/>
-                    <field name="width"/>
-                    <field name="height"/>
-                    <field name="weight"/>
-                </tree>
-            </field>
-        </record>
-
-        <record model="ir.ui.view" id="course_view_search">
-            <field name="name">space_mission.spaceship.search</field>
-            <field name="model">space_mission.spaceship</field>
-            <field name="arch" type="xml">
-                <search>
-                    <field name="name"/>
-                    <field name="model"/>
-                    <field name="type"/>
-                    <filter string="Big Vessels > 50 passengers" 
-                            name="big_vessels" 
-                            domain="[('capacity_passenger', '>=', 
-                                    50)]"/>
-                    <filter string="Small Vessels &lt; 50 passengers" 
-                            name="small_vessels" 
-                            domain="[('capacity_passenger', '&lt;', 
-                                    50)]"/>
-                    <group expand="0" string="Group By">
-                        <filter name="type" string="Type" 
-                                domain="[]" context="{'group_by': 'type'}"/>
+                        <group>
+                            <field name="fuel_type" widget="radio"/>
+                            <field name="crew_capacity"/>
+                        </group>
                     </group>
-                </search>
-            </field>
-        </record>
+                    <notebook>
+                        <page string="Crew">
+                            <group>    
+                                <field name="crew_ids"/>
+                            </group>
+                        </page>
+                        <page string="Missions">
+                            <group>    
+                                <field name="mission_ids"/>
+                            </group>
+                        </page>
+                        <page string="Technical Data">
+                            <group>
+                                <group>
+                                    <field name="length"/>
+                                    <field name="width"/>
+                                </group>
+                                <group>
+                                    <field name="height"/>
+                                    <field name="weight"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
-    </data>
+    <record id="spaceship_view_list" model="ir.ui.view">
+        <field name="name">space_mission.spaceship.list</field>
+        <field name="model">space_mission.spaceship</field>
+        <field name="arch" type="xml">
+            <tree string="Spaceship List">
+                <field name="name"/>
+                <field name="type"/>
+                <field name="model"/>
+                <field name="fuel_type" optional="True"/>
+                <field name="crew_capacity"/>
+                <field name="length"/>
+                <field name="width"/>
+                <field name="height" optional="True"/>
+                <field name="weight" optional="True"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="spaceship_view_search">
+        <field name="name">space_mission.spaceship.search</field>
+        <field name="model">space_mission.spaceship</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="model"/>
+                <field name="type"/>
+                <filter string="Big Vessels > 50 crew members" 
+                        name="big_vessels" 
+                        domain="[('crew_capacity', '>=', 
+                                50)]"/>
+                <filter string="Small Vessels &lt; 50 crew members" 
+                        name="small_vessels" 
+                        domain="[('crew_capacity', '&lt;', 
+                                50)]"/>
+                <group expand="0" string="Group By">
+                    <filter name="type" string="Type" 
+                            domain="[]" context="{'group_by': 'type'}"/>
+                </group>
+            </search>
+        </field>
+        </record>
 </odoo> 

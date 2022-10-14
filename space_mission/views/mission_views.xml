@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="mission_view_form">
+        <field name="name">space_mission.mission.form</field>
+        <field name="model">space_mission.mission</field>
+        <field name="arch" type="xml">
+            <form string="Mission Form">
+                <sheet>
+                    <h1><field name="name"/></h1>
+                    <group>
+                        <group>
+                            <field name="active"/>
+                            <field name="spaceship_id"/>
+                            <field name="priority" widget="priority"/>
+                        </group>
+                        <group>
+                            <field name="launch_date"/>
+                            <field name="return_date"/>
+                            <field name="duration"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Crew">
+                            <group>    
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="course_view_list">
+        <field name="name">space_mission.mission.list</field>
+        <field name="model">space_mission.mission</field>
+        <field name="arch" type="xml">
+            <tree string="Mission List">
+                <field name="name"/>
+                <field name="priority" widget="priority"/>
+                <field name="spaceship_id"/>
+                <field name="launch_date"/>
+                <field name="return_date"/>
+                <field name="duration"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mission_view_search" model="ir.ui.view">
+        <field name="name">space_mission.mission.search</field>
+        <field name="model">space_mission.mission</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="priority" widget="priority"/>               
+                <searchpanel>
+                    <field name="spaceship_id" enable_counters="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+</odoo> 
