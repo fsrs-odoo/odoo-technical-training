@@ -1,6 +1,6 @@
 {
     'name': 'Space Mission',
-    'version': '0.3',
+    'version': '0.4',
     'summary': 'Odoo Application to control its Space Mission',
     'description': """
         Space Mission Application to Manage Space Control:
