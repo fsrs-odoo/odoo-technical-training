@@ -27,7 +27,7 @@ class Spaceship(models.Model):
                                             ('liquid_fuel', 'Liquid Fuel')],
                                  string='Fuel Type',)
             
-    @api.constrains('width','lenght')
+    @api.constrains('width','length')
     def _check_width_less_length(self):
         for record in self:
             if record.width > record.length:
