@@ -12,7 +12,7 @@ class Spaceship(models.Model):
     active = fields.Boolean(default=True)    
     type = fields.Selection(selection=[('freighter','Freighter'),
                                        ('star_destroyer', 'Star Destroyer'),
-                                       ('star_cruiser', 'Star Destroyer'),
+                                       ('star_cruiser', 'Star Cruiser'),
                                        ('x_wing', 'X-Wing Fighter')],
                             string='Ship Type',)
     model = fields.Char(string='Ship Model', 

@@ -87,5 +87,15 @@
                 </group>
             </search>
         </field>
-        </record>
+    </record>
+    
+    <record id="spaceship_view_graph" model="ir.ui.view">
+        <field name="name">space_mission.spaceship.graph</field>
+        <field name="model">space_mission.spaceship</field>
+        <field name="arch" type="xml">
+            <graph string="Spaceship Metrics" type="pie" sample="1">
+                <field name="type"/>
+            </graph>
+        </field>
+    </record>
 </odoo> 

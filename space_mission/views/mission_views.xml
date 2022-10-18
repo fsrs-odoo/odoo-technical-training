@@ -11,12 +11,15 @@
                         <group>
                             <field name="active"/>
                             <field name="spaceship_id"/>
+                            <field name="type"/>
                             <field name="priority" widget="priority"/>
                         </group>
                         <group>
                             <field name="launch_date"/>
                             <field name="return_date"/>
                             <field name="duration"/>
+                            <field name="fuel_needed"/>
+                            <field name="fuel_current"/>
                         </group>
                     </group>
                     <notebook>
@@ -36,10 +39,13 @@
             <tree string="Mission List">
                 <field name="name"/>
                 <field name="priority" widget="priority"/>
+                <field name="type"/>          
                 <field name="spaceship_id"/>
                 <field name="launch_date"/>
                 <field name="return_date"/>
                 <field name="duration"/>
+                <field name="fuel_needed"/>
+                <field name="fuel_current"/>
             </tree>
         </field>
     </record>
@@ -50,11 +56,25 @@
         <field name="arch" type="xml">
             <search>
                 <field name="name"/>
-                <field name="priority" widget="priority"/>               
+                <field name="priority" widget="priority"/>  
+                <field name="type"/>    
+                <group expand="1" string="Group By">
+                    <filter name="type" string="Type" 
+                            domain="[]" context="{'group_by': 'type'}"/>
+                </group>
                 <searchpanel>
                     <field name="spaceship_id" enable_counters="1"/>
                 </searchpanel>
             </search>
+        </field>
+    </record>
+    <record id="mission_view_graph" model="ir.ui.view">
+        <field name="name">space_mission.mission.graph</field>
+        <field name="model">space_mission.mission</field>
+        <field name="arch" type="xml">
+            <graph string="Mission Metrics" type="pie" sample="1">
+                <field name="type"/>
+            </graph>
         </field>
     </record>
 </odoo> 

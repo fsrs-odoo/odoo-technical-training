@@ -15,6 +15,12 @@ class Mission(models.Model):
                                           ("3","3"),
                                           ("4","4"),
                                           ("5","5"),])
+    type = fields.Selection(selection=[('supply_delivery','Supply Delivery'),
+                                   ('exploration', 'Exploration'),
+                                   ('war_efforts', 'War Efforts'),
+                                   ('transport', 'Transportation')],
+                        string='Mission Type',)
+    
     launch_date = fields.Datetime(string="Launch Date",
                                   default=fields.Date.today)
     duration = fields.Float(string='Duration',
@@ -23,6 +29,9 @@ class Mission(models.Model):
                           compute='_compute_return_date',
                           inverse='_inverse_return_date',
                           store=True)
+    
+    fuel_needed = fields.Float(string="Needed Fuel")
+    fuel_current = fields.Float(string="Current Fuel")
     
     spaceship_id = fields.Many2one(comodel_name='space_mission.spaceship')
     
