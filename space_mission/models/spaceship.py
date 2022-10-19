@@ -5,6 +5,7 @@ from odoo.exceptions import ValidationError
 class Spaceship(models.Model):
 
     _name = 'space_mission.spaceship'
+    _inherit = ['image.mixin']
     _description = "Space Mission Spaceship"
     
     #Fields definition

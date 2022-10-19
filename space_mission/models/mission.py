@@ -6,7 +6,7 @@ from odoo import api, fields, models
 class Mission(models.Model):
     _name = "space_mission.mission"
     _description = "Space Missions"
-    
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     
     active = fields.Boolean(default=True)
     name = fields.Char(name='Mission Name')

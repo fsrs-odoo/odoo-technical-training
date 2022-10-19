@@ -7,6 +7,8 @@
             <form string="Spaceship Form">
                 <sheet>
                     <h1><field name="name"/></h1>
+                    <!-- ADD IMAGE MIXIN -->
+                    <field name="image_1920" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}"/>
                     <group>
                         <group>
                             <field name="active"/>
