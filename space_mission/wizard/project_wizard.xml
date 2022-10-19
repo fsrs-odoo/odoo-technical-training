@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="space_mission_project_wizard_form_view">
+        <field name='name'>space.mission.project.wizard.form</field>
+        <field name='model'>space.mission.project.wizard</field>
+        <field name='arch' type='xml'>
+            <form string='Create Project from Mission'>
+                <group>
+                    <field name="name"/>
+                    <field name="mission_id"/>
+                    <field name="mission_captain_id"/>
+                    <field name="mission_launch_date"/>
+                    <field name="mission_return_date"/>
+                </group>
+                <footer>
+                    <button name="create_project" type="object"
+                            string="Create" class="oe_highlight"/>
+                    <button special='cancel' string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="launch_sale_window">
+        <field name="name">Create Project</field>
+        <field name="res_model">space.mission.project.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="binding_model_id" ref="model_space_mission_mission"/>
+        <field name="target">new</field>
+    </record>
+</odoo> 

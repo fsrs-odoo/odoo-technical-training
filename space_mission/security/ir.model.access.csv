@@ -5,3 +5,4 @@ access_spaceship_general,spaceship general,space_mission.model_space_mission_spa
 access_mission_admin,mission admin,space_mission.model_space_mission_mission,space_mission_admin,1,1,1,1
 access_mission_crew,mission crew,space_mission.model_space_mission_mission,space_mission_crew,1,1,1,0
 access_mission_general,mission general,space_mission.model_space_mission_mission,space_mission_general,1,0,0,0
+space_mission.access_space_mission_project_wizard,access_space_mission_project_wizard,space_mission.model_space_mission_project_wizard,space_mission_admin,1,1,1,1

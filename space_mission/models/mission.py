@@ -20,6 +20,8 @@ class Mission(models.Model):
                                    ('war_efforts', 'War Efforts'),
                                    ('transport', 'Transportation')],
                         string='Mission Type',)
+    captain_id = fields.Many2one(comodel_name='res.users',
+                                string='Captain')
     
     launch_date = fields.Datetime(string="Launch Date",
                                   default=fields.Date.today)
@@ -34,6 +36,9 @@ class Mission(models.Model):
     fuel_current = fields.Float(string="Current Fuel")
     
     spaceship_id = fields.Many2one(comodel_name='space_mission.spaceship')
+    project_ids = fields.One2many(comodel_name='project.project',
+                                 inverse_name='mission_id',
+                                 string='Projects')
     
     @api.depends('launch_date', 'duration')
     def _compute_return_date(self):

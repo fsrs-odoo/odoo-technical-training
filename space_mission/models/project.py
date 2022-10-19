@@ -5,3 +5,4 @@ class Project(models.Model):
     
     mission_id = fields.Many2one(comodel_name='space_mission.mission',
                                  string="Mission")
+    user_id = fields.Many2one(string='Mission Captain')
