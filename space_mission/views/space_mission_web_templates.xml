@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mission_website">
+        <t t-call="website.layout">
+            <t t-set="title">Top Secret Missions</t>
+            <div class="oe_structure">
+                <div class="container">
+                    <h1>Missions</h1>
+                    <t t-foreach="missions" t-as="mission">
+                        <h3>
+                            <t t-out="mission.id"/>
+                            <t t-out="mission.name"/>
+                        </h3>
+                        <p>Mission Type:
+                            <span t-field="mission.type"/>
+                        </p>
+                        <p>Captain:
+                            <span t-field="mission.captain_id.name"/>
+                        </p>
+
+                        <strong>Project</strong>
+                        <t t-foreach="mission.project_ids" t-as="project">
+                            <p>
+                                <a t-attf-href="/space_mission/{{ slug(project)}}">
+                                    <t t-out="project.name"/>
+                                </a>
+                            </p>
+                            <p>Last Modified:
+                                <i t-field="project.write_date" t-field-options='{"format": "long"}'/>
+                            </p>
+                        </t>
+                        <t t-if="not mission.project_ids">
+                            <p>No Projects Currently</p>
+                        </t>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+    
+</odoo>

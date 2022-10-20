@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='report_spaceship' model="ir.actions.report">
+        <field name="name">Spaceship</field>
+        <field name="model">space_mission.spaceship</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">space_mission.report_spaceship_document</field>
+        <field name="report_file">space_mission.report_spaceship</field>
+        <field name="binding_model_id" ref="model_space_mission_spaceship"/>
+        <field name="binding_type">report</field>
+    </record>
+    <template id="report_spaceship_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2 t-field="doc.name" class="mt16"/>
+                        <div class="row mt32 mb32" id="spaceship_info">
+                            <div t-if="doc.type" class="col-auto mw-100 mb-2">
+                                <strong>Vessel Type:</strong>
+                                <span t-field="doc.type"/>
+                            </div>
+                            <div t-if="doc.model" class="col-auto mw-100 mb-2">
+                                <strong>Vessel Model:</strong>
+                                <span t-field="doc.model"/>
+                            </div>
+                            <div class="col-auto mw-100 mb-2">
+                                <strong>Size: LxWxH</strong>
+                                <t t-if="doc.length">
+                                    <span t-field="doc.length"/>
+                                </t>
+                                x
+                                <t t-if="doc.width">
+                                    <span t-field="doc.width"/>
+                                </t>
+                                x
+                                <t t-if="doc.height">
+                                    <span t-field="doc.height"/>
+                                </t>
+                            </div>
+                            
+                            <div t-if="doc.fuel_type" class="col-auto mw-100 mb-2">
+                                <strong>Fuel Type:</strong>
+                                <span t-field="doc.fuel_type"/>
+                            </div>
+                        </div>
+                        <h4>Projects</h4>
+                        <table class="table table-sm o_main_table">
+                            <thead>
+                                <tr>
+                                    <th name="th_name">MissionName</th>
+                                    <th name="th_type">Mission Type</th>
+                                    <th name="th_captain">Mission Captain</th>
+                                    <th name="th_launch_date">Launch Date</th>
+                                    <th name="th_return_date">Return Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.mission_ids" t-as="mission">
+                                    <tr>
+                                        <td t-if="mission.name" name="td_name">
+                                            <span t-field="mission.name"/>
+                                        </td>
+                                        <td t-if="mission.type" name="td_type">
+                                            <span t-field="mission.type"/>
+                                        </td>
+                                        <td t-if="mission.captain_id.name" name="td_captain_id_name">
+                                            <span t-field="mission.captain_id.name"/>
+                                        </td>
+                                        <td t-if="mission.launch_date" name="td_launch_date">
+                                            <span t-field="mission.launch_date"/>
+                                        </td>
+                                        <td t-if="mission.return_date" name="td_return_date">
+                                            <span t-field="mission.return_date"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <h4>Crew</h4>
+                        <table class="table table-sm o_main_table">
+                            <thead>
+                                <tr>
+                                    <th name="th_name">Name</th>
+                                    <th name="th_phone">Phone</th>
+                                    <th name="th_email">Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.crew_ids" t-as="crew">
+                                    <tr>
+                                        <td t-if="crew.name" name="td_name">
+                                            <span t-field="crew.name"/>
+                                        </td>
+                                        <td t-if="crew.phone" name="td_phone">
+                                            <span t-field="crew.phone"/>
+                                        </td>
+                                        <td t-if="crew.email" name="td_email">
+                                            <span t-field="crew.email"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
