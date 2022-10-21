@@ -9,7 +9,7 @@
                     <t t-foreach="missions" t-as="mission">
                         <h3>
                             <t t-out="mission.id"/>
-                            <t t-out="mission.name"/>
+                            <t t-fields="mission.name"/>
                         </h3>
                         <p>Mission Type:
                             <span t-field="mission.type"/>

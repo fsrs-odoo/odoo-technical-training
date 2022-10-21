@@ -21,7 +21,7 @@
                                 <span t-field="doc.type"/>
                             </div>
                             <div t-if="doc.model" class="col-auto mw-100 mb-2">
-                                <strong>Vessel Model:</strong>
+                                <strong>Vessel Model HELLO:</strong>
                                 <span t-field="doc.model"/>
                             </div>
                             <div class="col-auto mw-100 mb-2">
