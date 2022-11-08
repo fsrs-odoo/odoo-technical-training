@@ -1,0 +1,4 @@
+[submodule "fsrs-odoo/private-submodule"]
+	path = fsrs-odoo/private-submodule
+	url = git@github.com:fsrs-odoo/private-submodule.git
+	branch = 15.0-odoo-academy
