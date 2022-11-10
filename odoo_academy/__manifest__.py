@@ -39,7 +39,7 @@
         'demo/academy_demo.xml',
     ],
     'external_dependencies': {
-        'python': ['tensorflow'],
+        'python': ['pandas', 'scikit-learn'],
     },
     #Add license to remove License Warning
     'license': 'OPL-1'
