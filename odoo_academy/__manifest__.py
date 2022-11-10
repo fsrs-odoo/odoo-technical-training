@@ -38,6 +38,9 @@
     'demo': [
         'demo/academy_demo.xml',
     ],
+    'external_dependencies': {
+        'python': ['tensorflow'],
+    },
     #Add license to remove License Warning
     'license': 'OPL-1'
 }
