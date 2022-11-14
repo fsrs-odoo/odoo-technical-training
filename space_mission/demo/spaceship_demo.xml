@@ -34,5 +34,8 @@
             <field name="weight">7.8</field>
             <field name="fuel_type">liquid_fuel</field>
         </record>
+        <record id="base.user_admin" model="res.users">
+            <field name="groups_id" eval="[Command.link(ref('space_mission.space_mission_admin'))]"/>
+        </record>
     </data>
 </odoo>
