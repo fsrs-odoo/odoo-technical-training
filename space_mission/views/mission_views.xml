@@ -5,6 +5,9 @@
         <field name="model">space_mission.mission</field>
         <field name="arch" type="xml">
             <form string="Mission Form">
+                <header>
+                    <field name="status" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}"/>
+                </header>
                 <sheet>
                     <h1><field name="name"/></h1>
                     <group>
@@ -107,6 +110,7 @@
             </search>
         </field>
     </record>
+    
     <record id="mission_view_graph" model="ir.ui.view">
         <field name="name">space_mission.mission.graph</field>
         <field name="model">space_mission.mission</field>
@@ -114,6 +118,36 @@
             <graph string="Mission Metrics" type="pie" sample="1">
                 <field name="type"/>
             </graph>
+        </field>
+    </record>
+    
+    <!-- Kanban View -->
+    <record id="mission_view_kanban" model="ir.ui.view">
+        <field name="name">space_mission.mission.kanban</field>
+        <field name="model">space_mission.mission</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="captain_id">
+                <field name="name"/>
+                <field name="spaceship_id"/>
+                <field name="captain_id"/>
+                <progressbar field="status" colors='{"in_progress": "success", "blocked": "danger"}'/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="row">
+                                <div class="col-12">
+                                    <strong><t t-esc="record.name.value"/></strong>
+                                </div>
+                            </div>
+                            <field name="spaceship_id"/>
+                            <t t-if="record.captain_id.value">
+                                <hr class="mt8 mb8"/>
+                                <t t-esc="record.captain_id.value"/>
+                            </t>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
 </odoo> 
