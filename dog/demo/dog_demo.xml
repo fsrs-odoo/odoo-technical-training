@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record model="dog.dog" id="1">
-        <field name="breed">Dog</field>
+        <field name="name">Dog</field>
     </record>
     <record model="dog.dog" id="2">
-        <field name="breed">dog</field>
+        <field name="name">dog</field>
     </record>
     <record model="dog.dog" id="3">
-        <field name="breed">Bulldog</field>
+        <field name="name">Bulldog</field>
+        <field name="size">m</field>
     </record>
     <record model="dog.dog" id="4">
         <field name="breed">Sheepdog</field>
+        <field name="size">l</field>
     </record>
     <record model="dog.dog" id="5">
         <field name="breed">Taiwan Dog</field>
+        <field name="size">s</field>
     </record>
     <record model="dog.dog" id="6">
         <field name="breed">Chihuahua</field>
+        <field name="size">xs</field>
     </record>
     <record model="dog.dog" id="7">
-        <field name="breed">English Bulldog</field>
-        <field name="parent_id" ref="3"/>
+        <field name="breed">French Bulldog</field>
+        <field name="size">s</field>
     </record>
     <record model="dog.dog" id="8">
-        <field name="breed" ref="3"/>
+        <field name="breed">Great Dane</field>
+        <field name="size">xl</field>
     </record>
 </odoo>
