@@ -11,23 +11,23 @@
         <field name="size">m</field>
     </record>
     <record model="dog.dog" id="4">
-        <field name="breed">Sheepdog</field>
+        <field name="name">Sheepdog</field>
         <field name="size">l</field>
     </record>
     <record model="dog.dog" id="5">
-        <field name="breed">Taiwan Dog</field>
+        <field name="name">Taiwan Dog</field>
         <field name="size">s</field>
     </record>
     <record model="dog.dog" id="6">
-        <field name="breed">Chihuahua</field>
+        <field name="name">Chihuahua</field>
         <field name="size">xs</field>
     </record>
     <record model="dog.dog" id="7">
-        <field name="breed">French Bulldog</field>
+        <field name="name">French Bulldog</field>
         <field name="size">s</field>
     </record>
     <record model="dog.dog" id="8">
-        <field name="breed">Great Dane</field>
+        <field name="name">Great Dane</field>
         <field name="size">xl</field>
     </record>
 </odoo>
